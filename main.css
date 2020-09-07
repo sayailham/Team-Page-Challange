@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body,
+h1 {
+	margin: 0;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	line-height: 1.5;
+	min-height: 100vh;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	width: 80%;
+	margin: 4rem auto;
+}
+main {
+	width: 90%;
+	display: grid;
+	grid-template-columns: repeat(2, minmax(100px, 1fr));
+	margin: 2rem auto;
+}
+.card {
+	position: relative;
+	width: auto;
+}
+.card img {
+	width: 80%;
+	height: auto;
+}
+.card .desc {
+	background-color: #333;
+}
+
+.card .job {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	transform-origin: 0% 0%;
+	transform: translate(92%) rotate(90deg);
+	word-wrap: break-word;
+}
+
+
+
+footer {
+	text-align: center;
+	color: #A9A9A9;
+}
+
+@media (min-width: 720px) {
+	header .description {
+		width: 32%;
+	}
+	main {
+		width: 80%;
+		display: grid;
+		grid-template-columns: repeat(3, minmax(100px, 1fr));
+		justify-items: center;
+		margin: 2rem auto;
+	}
+	.card:nth-child(3n-1) {
+		margin-top: 190px;
+	}
+}
+
+@media (max-width: 719px) {
+	header {
+		display: block;
+		margin-top: 0;
+	}
+	header .description {
+		margin-top: 50px;
+	}
+	.card:nth-child(2n) {
+		margin-top: 100px;
+	}
+}
